@@ -3,9 +3,11 @@ class Infra:
     #Création des attributs d'instances
     def __init__(self, infra_id, length,infra_type, nb_houses ) -> None:
         self.infra_id = infra_id
-        self.length = length
-        self.infra_type = infra_type
         self.nb_houses = nb_houses
+        self.infra_type = infra_type
+        self.length = length
+        
+        
 
     # La Méthode repair_infra() permet de faire passer une infra de l'état "a_remplacer" à "infra_intacte" 
     def repair_infra(self):
