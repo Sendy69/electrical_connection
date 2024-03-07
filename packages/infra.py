@@ -16,15 +16,15 @@ class Infra:
             self.infra_type = "infra_intacte"
     
     # La Méthode get_infra_difficulty() permet de calculer la difficulté de reparation d'une infra 
-    def get_infra_difficulty(self) -> float:
-        return 0 if self.infra_type == "infra_intacte" else self.length/self.nb_houses
+    def get_infra_difficulty(self) :
+        return 0 if self.infra_type == "infra_intacte" else self.length / self.nb_houses
        
     
     # La Méthode __radd__() permet de sommer la difficulté de reparation de 02 infras
     def __radd__(self, other_infra) -> float: #sum() et +
-        if type(other_infra)!= Infra:
-            raise Exception("L'autre objet doit être une infrastructure")
-        else:
-            return self.get_infra_difficulty() + other_infra 
+        # if type(other_infra)!= Infra:
+        #     raise Exception("L'autre objet doit être une infrastructure")
+        # else:
+            return self.get_infra_difficulty() + other_infra
         
         

@@ -8,10 +8,13 @@ class Batiment:
         
 
     #Cette méthode permet de calculer la difficulté d'un batiment en sommant les difficultés de ces infra
-    def get_building_difficulty(self) -> float:
+    def get_building_difficulty(self) :
         return sum(self.list_infras)
+
     
     # Cette méthode permet de comparer la difficulté entre 02 batiments
     def __lt__(self, other_object):
         return self.get_building_difficulty() < other_object.get_building_difficulty() 
-    
+   
+    def __repr__(self):
+        return f"object Building - id : {self.id_building}"
